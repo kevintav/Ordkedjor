@@ -112,7 +112,7 @@ public class Main {
             for (int w : graph[v]) {
                 if (!visited[w]) {
                     visited[w] = true;
-                    dist[w]++;
+                    dist[w] = dist[v] + 1;
 
                     if (w == goal) {
                         return dist[w];
